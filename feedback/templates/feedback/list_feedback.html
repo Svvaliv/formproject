@@ -1,0 +1,21 @@
+{% extends "feedback/base.html" %}
+
+{% block title %}
+    Страница отзывов
+{% endblock %}
+
+{% block content %}
+    {% for feed in feedbacks %}
+        <div>
+            <h2>
+                {{ feed.name }} {{ feed.surname }}
+                <br>
+                Отзыв: {{ feed.feedback }}
+                <br>
+                Рейтинг: {{ feed.rating }}
+            </h2>
+            <br>
+            <br>
+        </div>
+    {% endfor %}
+{% endblock %}
