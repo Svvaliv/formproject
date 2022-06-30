@@ -5,17 +5,16 @@
 {% endblock %}
 
 {% block content %}
-    {% for feed in feedbacks %}
-        <div>
-            <h2>
-                {{ feed.name }} {{ feed.surname }}
-                <br>
-                Отзыв: {{ feed.feedback }}
-                <br>
-                Рейтинг: {{ feed.rating }}
-            </h2>
-            <br>
-            <br>
-        </div>
-    {% endfor %}
+    <h2>Список отзывов</h2>
+        {% for feed in feedbacks %}
+
+            <p>
+                <strong>{{ feed.pk }}. </strong>
+                <strong>ФИО: </strong>{{ feed.name }} {{ feed.surname }} <br>
+                <strong>Отзыв:</strong> {{ feed.feedback }} <br>
+                <strong>Рейтинг:</strong> {{ feed.rating }} <br>
+            </p>
+
+
+        {% endfor %}
 {% endblock %}
