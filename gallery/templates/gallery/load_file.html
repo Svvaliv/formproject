@@ -1,11 +1,12 @@
-{% extends "feedback/base.html" %}
+{% extends 'feedback/base.html' %}
 
-{% block title %}Добавление файла в галерею{% endblock %}
+{% block title %} Добавление файла в галлерею {% endblock %}
 
 {% block content %}
     <h2>Загрузите файл</h2>
-    <form method="">
-        <input type="file">
-        <button>Загрузить</button>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="image">
+        <button type="submit">Загрузить</button>
     </form>
 {% endblock %}
