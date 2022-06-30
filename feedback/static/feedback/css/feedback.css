@@ -1,18 +1,28 @@
 textarea {
     resize: None;
 }
+
 body {
     margin: 0;
     font-family: Sans-Serif;
 }
 
-h2{
-    width:50%;
+h2 {
+    width: 70%;
     margin: 20px auto 5px;
     text-align: center;
     padding: 5px;
     border-radius: 5px;
     box-shadow: 0 2px 8px #3ca3c1;
+}
+
+h3 {
+    width: 50%;
+    margin: 20px auto 5px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #937f0a;
 }
 
 form {
@@ -76,6 +86,6 @@ button:active {
     background-color: #f4eeff;
 }
 
-.errors label{
- color: #aa1754;
+.errors label {
+    color: #aa1754;
 }

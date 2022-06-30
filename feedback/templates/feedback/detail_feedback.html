@@ -5,9 +5,9 @@
 {% endblock %}
 
 {% block content %}
-    <h2>{{ feed.name }} {{ feed.surname }}</h2>
-    <br>
-    <h2>Отзыв: <br>{{ feed.feedback }}</h2>
-    <br>
-    <h2>Рейтинг: {{ feed.rating }}</h2>
+    <h2>Информация об отзыве</h2>
+    <h3>Имя: {{ feedback.name }}</h3>
+    <h3>Фамилия: {{ feedback.surname }}</h3>
+    <h3>Рейтинг: {{ feedback.rating }}</h3>
+    <h3>{{ feedback.feedback }}</h3>
 {% endblock %}
