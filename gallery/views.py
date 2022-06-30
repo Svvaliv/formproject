@@ -1,13 +1,15 @@
-from django.http import HttpResponseRedirect
-from django.shortcuts import render
-from django.views import View
+from django.views.generic import ListView
 from django.views.generic.edit import CreateView
 
-from .forms import GalleryUploadForm
 from .models import Gallery
 
 
 # Create your views here.
+
+class ListGallery(ListView):
+    model = Gallery
+    template_name = "gallery/images_list.html"
+    context_object_name = 'records'
 
 
 # class GalleryView(View):
