@@ -2,6 +2,7 @@ from django.views.generic import ListView
 from django.views.generic.edit import CreateView
 
 from .models import Gallery
+from .forms import GalleryUploadForm
 
 
 # Create your views here.
@@ -28,7 +29,7 @@ class ListGallery(ListView):
 
 class CreateGalleryView(CreateView):
     model = Gallery
-    fields = '__all__'
+    form_class = GalleryUploadForm
     context_object_name = 'form'
     template_name = 'gallery/load_file.html'
     success_url = '/load_image'
